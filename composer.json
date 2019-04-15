@@ -1,0 +1,20 @@
+{
+    "name": "markuszeller/php-timer",
+    "description": "Simple Timer Class",
+    "require": {
+        "php": ">=7.1"
+    },
+    "license": "MIT",
+    "homepage": "https://github.com/markuszeller/php-timer",
+    "authors": [
+        {
+            "name": "Markus Zeller",
+            "email": "git@markuszeller.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "markuszeller\\": "src/"
+        }
+    }
+}
