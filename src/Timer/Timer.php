@@ -8,6 +8,8 @@ class Timer
     protected $endTime;
     protected $diffSeconds;
 
+    const SECONDS_24H = 24 * 60 * 60;
+
     public function __construct()
     {
         $this->startTime = microtime(true);
@@ -39,10 +41,24 @@ class Timer
 
     public function getTimeFormatted(): string
     {
+        $string = '';
+
         if(!$this->endTime) {
             $this->stop();
         }
 
-        return gmdate("H:i:s", $this->diffSeconds);
+        $seconds = $this->diffSeconds;
+        if($seconds > self::SECONDS_24H) {
+            $days = floor($seconds / self::SECONDS_24H);
+            if($days > 0) {
+                $string .= $days . ' day';
+                if($days > 1) $string .= 's';
+                $string .= ' ';
+            }
+        }
+
+        $string .= gmdate("H:i:s", $seconds);
+
+        return $string;
     }
 }
