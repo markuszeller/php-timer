@@ -2,7 +2,7 @@
     "name": "markuszeller/php-timer",
     "description": "Simple Timer Class",
     "require": {
-        "php": ">=7.1"
+        "php": ">=7.4"
     },
     "license": "MIT",
     "homepage": "https://github.com/markuszeller/php-timer",
