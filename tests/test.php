@@ -35,4 +35,32 @@ if($timer->getTimeFormatted() !== '7 days 00:16:40') die(FAIL);
 if($timer->getSecondsRounded() !== 605800) die(FAIL);
 echo PASS;
 
+echo "Testing Progress", PHP_EOL;
+$timer = new TestTimer();
+$timer->setTotal(100);
+echo $timer->getProgressAsciiBar(), PHP_EOL;
+$timer->setDone(88);
+echo $timer->getProgressAsciiBar(), PHP_EOL;
+echo $timer->getProgressPercentage(), PHP_EOL;
+echo $timer->getProgressDone(), PHP_EOL;
+echo PHP_EOL;
+
+echo "Testing Progress Format", PHP_EOL;
+$timer = new TestTimer();
+$timer->setTotal(1234);
+$timer->setDone(567);
+echo $timer->getProgress(), PHP_EOL;
+echo $timer->getProgress('%p %b'), PHP_EOL;
+echo $timer->getProgress('%c %b %p'), PHP_EOL;
+echo PHP_EOL;
+
+echo "Testing Progress Overflow", PHP_EOL;
+$timer = new TestTimer();
+$timer->setTotal(100);
+$timer->setDone(150);
+echo $timer->getProgress(), PHP_EOL;
+echo $timer->getProgressPercentage(), PHP_EOL;
+echo $timer->getProgressDone(), PHP_EOL;
+echo PHP_EOL;
+
 exit(0);
