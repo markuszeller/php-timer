@@ -1,7 +1,7 @@
 # php-timer
 Simple Timer Class
 
-![PHP from Packagist](https://img.shields.io/packagist/php-v/markuszeller/php-timer/v1.0.0.svg)
+![PHP from Packagist](https://img.shields.io/packagist/php-v/markuszeller/php-timer/v1.1.1.svg)
 ![Install with Composer)](https://img.shields.io/badge/composer-markuszeller%2Fphp--time-blue.svg)
 
 Init a timer
