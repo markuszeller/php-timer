@@ -31,6 +31,8 @@ Receive the values in different formats:
       // 00:01:06
       echo $timer->getTimeFormatted();
 
+- Formatted as milliseconds
+
       // 5000.1788139343
       sleep(5);
       echo $timer->getMilliseconds();
