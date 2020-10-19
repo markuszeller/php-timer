@@ -114,7 +114,14 @@ class Timer
     }
 
     public function getProgressDone() {
-
         return sprintf("%{$this->totalStrLength}d/%{$this->totalStrLength}d", $this->done, $this->total);
+    }
+
+    public function getMilliseconds() {
+        if (!$this->endTime) {
+            $this->stop();
+        }
+
+        return $this->diffSeconds * 1000;
     }
 }

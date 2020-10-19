@@ -63,4 +63,12 @@ echo $timer->getProgressPercentage(), PHP_EOL;
 echo $timer->getProgressDone(), PHP_EOL;
 echo PHP_EOL;
 
+echo "Testing Sleep", PHP_EOL;
+$timer = new TestTimer();
+sleep(5);
+$timer->stop();
+echo $timer->getMilliseconds(), PHP_EOL;
+echo PHP_EOL;
+
+
 exit(0);
