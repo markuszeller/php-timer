@@ -1,7 +1,7 @@
 # php-timer
 Simple Timer Class
 
-![PHP from Packagist](https://img.shields.io/packagist/php-v/markuszeller/php-timer/v1.1.1.svg)
+![PHP from Packagist](https://img.shields.io/packagist/php-v/markuszeller/php-timer/v1.1.0.svg)
 ![Install with Composer)](https://img.shields.io/badge/composer-markuszeller%2Fphp--time-blue.svg)
 
 Init a timer
@@ -30,6 +30,10 @@ Receive the values in different formats:
 
       // 00:01:06
       echo $timer->getTimeFormatted();
+
+      // 5000.1788139343
+      sleep(5);
+      echo $timer->getMilliseconds();
 
 - Different outputs
 
